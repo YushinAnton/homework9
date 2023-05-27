@@ -2,16 +2,17 @@
 //Напишите программу, которая выведет все натуральные числа в промежутке от N до 1. 
 //Выполнить с помощью рекурсии.
 
-﻿void Numbers(int m, int n)
-{
-    if (m <= n)
+﻿void PrintNumber(int firstNumber, int secondNumber)
+{   
+    Console.WriteLine($"{firstNumber} ");
+    if (firstNumber <= secondNumber)
     {
-        Numbers(m + 1, n);
-        Console.Write($"{m} ");
+        PrintNumber(firstNumber + 1, secondNumber);
+        
     }
 }
 
 Console.Write("Введите число: ");
-int n = Convert.ToInt32(Console.ReadLine());
-int m = 1;
-Numbers(m, n);
+int secondNumber = Convert.ToInt32(Console.ReadLine());
+int firstNumber = 1;
+PrintNumber(firstNumber, secondNumber);
